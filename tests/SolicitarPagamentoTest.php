@@ -5,14 +5,13 @@ namespace Tests;
 use BankOn\Cliente;
 use BankOn\Services\Checkout\SolicitarPagamento;
 use BankOn\Services\Checkout\Solicitar;
-use BankOn\Services\Checkout\Resposta;
 
 class SolicitarPagamentoTest extends TestCase
 {
     public function testSolicitarPagamento()
     {
         $env_token = \getenv('TOKEN_TRANSACAO');
-        
+
         $cliente = new Cliente;
         $cliente->setTokenTransacao($env_token);
 
@@ -24,9 +23,8 @@ class SolicitarPagamentoTest extends TestCase
         $solicitar->setUrlCallbackFalha('http://www.seudominio.com.br/url-falha');
 
         $solicitarPagamento = new SolicitarPagamento;
-        $resposta = $solicitarPagamento->executar($cliente,$solicitar);
+        $resposta = $solicitarPagamento->executar($cliente, $solicitar);
 
         $this->assertEquals($resposta->getUrlPagamento(), "https://api.bankon.com.br/checkout/p/" . $resposta->getTokenPagamento());
-
     }
 }
