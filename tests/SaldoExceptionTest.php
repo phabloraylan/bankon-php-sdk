@@ -16,6 +16,6 @@ class SaldoExceptionTest extends TestCase
         $cliente = new Cliente;
         $cliente->setTokenConsulta($env_token);
 
-        Saldo::getSaldo($cliente);
+        Saldo::get($cliente);
     }
 }

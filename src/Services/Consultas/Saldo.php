@@ -11,7 +11,7 @@ class Saldo
 {
     private $usuario;
     private $valorDisponivel;
-    public static function getSaldo(Cliente $cliente)
+    public static function get(Cliente $cliente)
     {
 
         $response = self::getResponse($cliente);
