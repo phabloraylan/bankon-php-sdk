@@ -15,7 +15,7 @@ class UsuarioTest extends TestCase
         $cliente = new Cliente;
         $cliente->setTokenConsulta($env_token);
 
-        $usuario = Usuario::get($cliente,$env_usuario);
+        $usuario = Usuario::get($cliente, $env_usuario);
 
         $this->assertEquals($usuario->getUsuario(), $env_usuario);
     }
