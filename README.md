@@ -177,4 +177,4 @@ try{
     echo $e->getMessage();
 }
 ```
-Para garantir maior integridade e segurança, opcionalmente você poderá fazer a validação da transação seguindo os passos em Consultar Transfência.
+Para garantir maior integridade e segurança, opcionalmente você poderá fazer a validação da transação seguindo os passos em Consultar Transferência.
