@@ -16,7 +16,7 @@ class SaldoTest extends TestCase
         $cliente->setTokenConsulta($env_token);
 
         $saldo = Saldo::get($cliente);
-
+        
         $this->assertEquals($saldo->getUsuario(), $env_usuario);
     }
 }
