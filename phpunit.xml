@@ -19,7 +19,8 @@
         </whitelist>
     </filter>
     <php>
-        <env name="TOKEN_CONSULTA" value="token"/>
-        <env name="TOKEN_TRANSACAO" value="testing"/>
+        <env name="TOKEN_CONSULTA" value=""/>
+        <env name="TOKEN_TRANSACAO" value=""/>
+        <env name="SEU_USUARIO" value=""/>
     </php>
 </phpunit>
