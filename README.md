@@ -160,20 +160,21 @@ $solicitar = new Solicitar;
 $solicitar->setEmail('test@gmail.com');
 $solicitar->setValor(100);
 $solicitar->setRefPagamento('test');
-$solicitar->setUrlCallbackSuccesso('http://www.seudominio.com.br/url-sucesso');
+$solicitar->setUrlCallbackSuccesso('http://www.seudominio.com.br/url-sucesso');// Após o pagamento ser efetuado pelo cliente, ele será redirecionado para a url_callback contendo o parâmero transacao na url: http://www.seudominio.com.br/url_callback?transacao={codigo_transacao}
 $solicitar->setUrlCallbackFalha('http://www.seudominio.com.br/url-falha');
 
 try{
     $solicitarPagamento = new SolicitarPagamento;
     $resposta = $solicitarPagamento->executar($cliente, $solicitar);
 
-    echo $resposta->getTokenPagamento()
-    echo $resposta->getUrlPagamento()
-    echo $resposta->getSolicitacao()// Data de solicitação
-    echo $resposta->getExpiracao()// Data de expiração
-    $resposta->getExpiracaoCarbon()// retorna a data pra ser usada com a biblioteca https://carbon.nesbot.com/
+    echo $resposta->getTokenPagamento();
+    echo $resposta->getUrlPagamento(); // Uma vez que a solicitação é criada, use a URL que você encontra nesse metódo para gerar um botão de pagamento
+    echo $resposta->getSolicitacao(); // Data de solicitação
+    echo $resposta->getExpiracao(); // Data de expiração
+    $resposta->getExpiracaoCarbon(); // retorna a data pra ser usada com a biblioteca https://carbon.nesbot.com/
 
 }catch(BankOnException $e){
     echo $e->getMessage();
 }
 ```
+Para garantir maior integridade e segurança, opcionalmente você poderá fazer a validação da transação seguindo os passos em Consultar Transfência.
