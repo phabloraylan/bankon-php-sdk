@@ -9,7 +9,7 @@
             "email": "phabloraylan@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "require": {
         "guzzlehttp/guzzle": "~6.0",
         "nesbot/carbon": "2.25.0"
