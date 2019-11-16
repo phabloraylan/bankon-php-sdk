@@ -70,12 +70,12 @@ try{
 
     echo $transferencia->getData();
     echo $transferencia->getValor();
-    echo $transferencia->getOrigemUsuario()
-    echo $transferencia->getOrigemNome()
-    echo $transferencia->getOrigemDocumento()
-    echo $transferencia->getDestinoUsuario()
-    echo $transferencia->getDestinoNome()
-    echo $transferencia->getDestinoDocumento()
+    echo $transferencia->getOrigemUsuario();
+    echo $transferencia->getOrigemNome();
+    echo $transferencia->getOrigemDocumento();
+    echo $transferencia->getDestinoUsuario();
+    echo $transferencia->getDestinoNome();
+    echo $transferencia->getDestinoDocumento();
     $transferencia->getDataCarbon();// retorna a data pra ser usada com a biblioteca https://carbon.nesbot.com/
 
 }catch(BankOnException $e){
