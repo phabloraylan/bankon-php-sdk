@@ -19,7 +19,7 @@ O metodo mais conveniente é via [composer](https://getcomposer.org/). Se ainda 
 Execute o seguinte comando na raiz do seu projeto para instalar a biblioteca:
 
 ```sh
-composer require phabloraylan/bankon-php-sdk
+composer require fmedeiros95/bankon-php-sdk
 ```
 
 Inclua o autoloader em seu projeto:
